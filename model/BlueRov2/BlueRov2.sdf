@@ -30,7 +30,7 @@
     </link>
 
     <link name='thruster1'>
-      <pose>0.12 -0.11 0 1.5707963 1.5707963 -0.78539815</pose>
+      <pose>0.12 -0.11 0.01 1.5707963 1.5707963 -0.78539815</pose>
       <!--visual name="cil">
           <geometry>
             <cylinder>
@@ -57,7 +57,7 @@
     </joint>
 
     <link name='thruster2'>
-      <pose>0.12 0.11 0 1.5707963 1.5707963 3.92699075</pose>
+      <pose>0.12 0.11 0.01 1.5707963 1.5707963 3.92699075</pose>
       <!--visual name="cil1">
         <geometry>
           <cylinder>
@@ -88,7 +88,7 @@
     </joint>
 
     <link name='thruster3'>
-      <pose>-0.12 -0.11 0 1.5707963 1.5707963 0.78540075</pose>
+      <pose>-0.12 -0.11 0.01 1.5707963 1.5707963 0.78540075</pose>
       <!--visual name="cil2">
           <geometry>
             <cylinder>
@@ -119,7 +119,7 @@
     </joint>
 
     <link name='thruster4'>
-      <pose>-0.12 0.11 0 1.5707963 1.5707963 2.35619445</pose>
+      <pose>-0.12 0.11 0.01 1.5707963 1.5707963 2.35619445</pose>
       <!--visual name="cil3">
           <geometry>
             <cylinder>

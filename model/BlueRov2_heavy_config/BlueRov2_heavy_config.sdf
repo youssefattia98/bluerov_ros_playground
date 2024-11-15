@@ -1,0 +1,347 @@
+<?xml version='1.0'?>
+<sdf version='1.5'>
+  <model name='BlueRov2'>
+    <pose>0 0 0 0 0 0</pose>
+
+    <!-- Base link -->
+    <link name='base_link'>
+      <inertial>
+        <mass>11</mass>
+        <inertia>
+          <ixx>1</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1</iyy>
+          <iyz>0</iyz>
+          <izz>1</izz>
+        </inertia>
+      </inertial>
+      <visual name='base_link_visual'>
+        <geometry>
+          <mesh>
+            <scale>1.0 1.0 1.0</scale>
+            <uri>model://BlueRov2_heavy_config/meshes/BlueRov2_heavy_config.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <sensor name="imu_sensor" type="imu">
+        <pose>0 0 0 0.0 0 0</pose>
+        <always_on>1</always_on>
+        <update_rate>10000.0</update_rate>
+      </sensor>
+    </link>
+
+    <!-- Thruster 1 (front-right, horizontal) -->
+    <link name='thruster1'>
+      <pose>0.134 -0.134 0.025 1.5707963 1.5707963 -0.78539815</pose>
+      <inertial>
+        <mass>1e-10</mass>
+        <inertia>
+          <ixx>1</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1</iyy>
+          <iyz>0</iyz>
+          <izz>1</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='thruster1_joint' type='fixed'>
+      <parent>base_link</parent>
+      <child>thruster1</child>
+    </joint>
+
+    <!-- Thruster 2 (front-left, horizontal) -->
+    <link name='thruster2'>
+      <pose>0.134 0.134 0.025 1.5707963 1.5707963 3.92699075</pose>
+      <inertial>
+        <mass>1e-10</mass>
+        <inertia>
+          <ixx>1</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1</iyy>
+          <iyz>0</iyz>
+          <izz>1</izz>
+        </inertia>
+      </inertial>
+
+    </link>
+    <joint name='thruster2_joint' type='fixed'>
+      <parent>base_link</parent>
+      <child>thruster2</child>
+    </joint>
+
+    <!-- Thruster 3 (rear-right, horizontal) -->
+    
+    
+    <link name='thruster3'>
+    
+      <pose>-0.134 -0.134 0.025 1.5707963 1.5707963 0.78540075</pose>
+      <inertial>
+        <mass>1e-10</mass>
+        <inertia>
+          <ixx>1</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1</iyy>
+          <iyz>0</iyz>
+          <izz>1</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='thruster3_joint' type='fixed'>
+      <parent>base_link</parent>
+      <child>thruster3</child>
+    </joint>
+
+    <!-- Thruster 4 (rear-left, horizontal) -->
+    <link name='thruster4'>
+    
+      <pose>-0.134 0.134 0.025 1.5707963 1.5707963 2.35619445</pose>
+      <inertial>
+        <mass>1e-10</mass>
+        <inertia>
+          <ixx>1</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1</iyy>
+          <iyz>0</iyz>
+          <izz>1</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='thruster4_joint' type='fixed'>
+      <parent>base_link</parent>
+      <child>thruster4</child>
+    </joint>
+
+    <!-- Thruster 5 (right side, vertical) -->
+    <link name='thruster5'>
+      <pose>0.135 -0.23 0.1 3.1415926 0 0</pose> 
+      <inertial>
+        <mass>1e-10</mass>
+        <inertia>
+          <ixx>1</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1</iyy>
+          <iyz>0</iyz>
+          <izz>1</izz>
+        </inertia>
+      </inertial>
+    </link>
+    
+
+    <joint name='thruster5_joint' type='fixed'>
+      <parent>base_link</parent>
+      <child>thruster5</child>
+    </joint>
+
+    <!-- Thruster 6 (left side, vertical) -->
+    <link name='thruster6'>
+      <pose>0.135 0.23 0.1 3.1415926 0 0</pose> 
+      <inertial>
+        <mass>1e-10</mass>
+        <inertia>
+          <ixx>1</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1</iyy>
+          <iyz>0</iyz>
+          <izz>1</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='thruster6_joint' type='fixed'>
+      <parent>base_link</parent>
+      <child>thruster6</child>
+    </joint>
+
+    <!-- Thruster 7 (front-right, vertical) -->
+    <link name='thruster7'>
+      <pose>-0.135 -0.23 0.1 3.1415926 0 0</pose>  
+      <inertial>
+        <mass>1e-10</mass>
+        <inertia>
+          <ixx>1</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1</iyy>
+          <iyz>0</iyz>
+          <izz>1</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='thruster7_joint' type='fixed'>
+      <parent>base_link</parent>
+      <child>thruster7</child>
+    </joint>
+
+    <!-- Thruster 8 (rear-left, vertical) -->
+    <link name='thruster8'>
+      <pose>-0.135 0.23 0.1 3.1415926 0 0</pose> 
+      <inertial>
+        <mass>1e-10</mass>
+        <inertia>
+          <ixx>1</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1</iyy>
+          <iyz>0</iyz>
+          <izz>1</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='thruster8_joint' type='fixed'>
+      <parent>base_link</parent>
+      <child>thruster8</child>
+    </joint>
+
+    <allow_auto_disable>1</allow_auto_disable>
+
+    <!-- ArduPilot Plugin for Thruster Control -->
+    <plugin name="ArduPilotPlugin" filename="libArduPilotPlugin.so">
+      <fdm_addr>127.0.0.1</fdm_addr>
+      <fdm_port_in>9002</fdm_port_in>
+      <fdm_port_out>9003</fdm_port_out>
+      <imuName>BlueRov2::base_link::imu_sensor</imuName>
+      <connectionTimeoutMaxCount>5</connectionTimeoutMaxCount>
+
+      <!-- Thruster 1 Control -->
+      <control channel="0">
+        <type>EFFORT</type>
+        <offset>-0.5</offset>
+        <p_gain>1</p_gain>
+        <i_gain>0</i_gain>
+        <d_gain>0</d_gain>
+        <cmd_max>51</cmd_max>
+        <cmd_min>-40</cmd_min>
+        <linkName>BlueRov2::thruster1</linkName>
+        <multiplier>102</multiplier>
+      </control>
+
+      <!-- Thruster 2 Control -->
+      <control channel="1">
+        <type>EFFORT</type>
+        <offset>-0.5</offset>
+        <p_gain>1</p_gain>
+        <i_gain>0</i_gain>
+        <d_gain>0</d_gain>
+        <cmd_max>51</cmd_max>
+        <cmd_min>-40</cmd_min>
+        <linkName>BlueRov2::thruster2</linkName>
+        <multiplier>102</multiplier>
+      </control>
+
+      <!-- Thruster 3 Control -->
+      <control channel="2">
+        <type>EFFORT</type>
+        <offset>-0.5</offset>
+        <p_gain>1</p_gain>
+        <i_gain>0</i_gain>
+        <d_gain>0</d_gain>
+        <cmd_max>51</cmd_max>
+        <cmd_min>-40</cmd_min>
+        <linkName>BlueRov2::thruster3</linkName>
+        <multiplier>102</multiplier>
+      </control>
+
+      <!-- Thruster 4 Control -->
+      <control channel="3">
+        <type>EFFORT</type>
+        <offset>-0.5</offset>
+        <p_gain>1</p_gain>
+        <i_gain>0</i_gain>
+        <d_gain>0</d_gain>
+        <cmd_max>51</cmd_max>
+        <cmd_min>-40</cmd_min>
+        <linkName>BlueRov2::thruster4</linkName>
+        <multiplier>102</multiplier>
+      </control>
+
+      <!-- Thruster 5 Control -->
+      <control channel="4">
+        <type>EFFORT</type>
+        <offset>-0.5</offset>
+        <p_gain>1</p_gain>
+        <i_gain>0</i_gain>
+        <d_gain>0</d_gain>
+        <cmd_max>51</cmd_max>
+        <cmd_min>-40</cmd_min>
+        <linkName>BlueRov2::thruster5</linkName>
+        <multiplier>102</multiplier>
+      </control>
+
+      <!-- Thruster 6 Control -->
+      <control channel="5">
+        <type>EFFORT</type>
+        <offset>-0.5</offset>
+        <p_gain>1</p_gain>
+        <i_gain>0</i_gain>
+        <d_gain>0</d_gain>
+        <cmd_max>51</cmd_max>
+        <cmd_min>-40</cmd_min>
+        <linkName>BlueRov2::thruster6</linkName>
+        <multiplier>102</multiplier>
+      </control>
+
+      <!-- Thruster 7 Control -->
+      <control channel="6">
+        <type>EFFORT</type>
+        <offset>-0.5</offset>
+        <p_gain>1</p_gain>
+        <i_gain>0</i_gain>
+        <d_gain>0</d_gain>
+        <cmd_max>51</cmd_max>
+        <cmd_min>-40</cmd_min>
+        <linkName>BlueRov2::thruster7</linkName>
+        <multiplier>102</multiplier>
+      </control>
+
+      <!-- Thruster 8 Control -->
+      <control channel="7">
+        <type>EFFORT</type>
+        <offset>-0.5</offset>
+        <p_gain>1</p_gain>
+        <i_gain>0</i_gain>
+        <d_gain>0</d_gain>
+        <cmd_max>51</cmd_max>
+        <cmd_min>-40</cmd_min>
+        <linkName>BlueRov2::thruster8</linkName>
+        <multiplier>102</multiplier>
+      </control>
+    </plugin>
+
+    <plugin name="freebuoyancy_gazebo" filename="libfreebuoyancy_gazebo.so">
+      <descriptionParam>robot_description</descriptionParam>
+      <fluidTopic>current</fluidTopic>
+      <alwaysOn>true</alwaysOn>
+      <surface>0 0 0</surface>
+      <updateRate>0.001</updateRate>
+
+      <!-- Define the current velocity directly in the SDF -->
+      <current_velocity>0.0 0.0 0.0</current_velocity> <!-- 1 m/s current along X axis -->
+
+      <link name="base_link">
+        <buoyancy>
+          <compensation>0.2525</compensation>
+          <origin xyz="0.12585 0.111 0.1789"/>
+        </buoyancy>
+        <buoyancy>
+          <compensation>0.2525</compensation>
+          <origin xyz="-0.12585 0.111 0.1789"/>
+        </buoyancy>
+        <buoyancy>
+          <compensation>0.2525</compensation>
+          <origin xyz="-0.12585 -0.111 0.1789"/>
+        </buoyancy>
+        <buoyancy>
+          <compensation>0.2525</compensation>
+          <origin xyz="0.12585 -0.111 0.1789"/>
+        </buoyancy>
+      </link>
+    </plugin>
+
+  </model>
+</sdf>
